@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <title>OBC rate noise trending</title>
+    <link href="/mta/ASPECT/aspect.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
+
+  <body>
+<!--#include virtual="/mta/ASPECT/header.html"-->
+    
+      <h2> OBC rate noise trending </h2>
+
+      The plots below show the OBC roll, pitch, and yaw rate noise over the last year.<br><br>
+
+      <h3> Pitch </h3>
+      <img src="pitch_time_recent.png"><br><br>
+      <img src="pitch_time_longterm.png"><br><br>
+      <h3> Yaw </h3>
+      <img src="yaw_time_recent.png"><br><br>
+      <img src="yaw_time_longterm.png"><br><br>
+      <h3> Roll </h3>
+      <img src="roll_time_recent.png"><br><br>
+      <img src="roll_time_longterm.png"><br><br>
+
+      <h3> Histograms </h3>
+      <table>
+      <tr><td> <img src="roll_hist_recent.png"></td><td><img src="roll_hist_longterm.png"></td></tr>
+      <tr><td> <img src="pitch_hist_recent.png"></td><td><img src="pitch_hist_longterm.png"></td></tr>
+      <tr><td> <img src="yaw_hist_recent.png"></td><td><img src="yaw_hist_longterm.png"></td></tr>
+      </table>
+      <br></br>
+
+<h2> Processing notes </h2>
+<pre>
+cd /proj/sot/ska/analysis/obc_rate_noise/obc_rates
+make update
+</pre>
+
+<!--#include virtual="/mta/ASPECT/footer.html"--> 
+<!--footer end-->
+
+  </body>
+</html>
