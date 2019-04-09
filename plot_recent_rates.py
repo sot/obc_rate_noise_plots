@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import os
 import numpy as np
 import matplotlib
 if __name__ == '__main__':
@@ -22,6 +23,8 @@ def get_options():
                       type='float',
                       default=1.6e7,
                       help="Plot duration (seconds)")
+    parser.add_option("--outdir",
+                      default=".")
     parser.add_option("--root",
                       default='recent',
                       help="Root file name")
@@ -75,7 +78,7 @@ if 1:
         #plt.subplots_adjust(left=0.16, bottom=0.14)
         plt.grid(linestyle='--')
         plt.show()
-        plt.savefig(label + '_hist_%s.png' % opt.root)
+        plt.savefig(os.path.join(opt.outdir, label + '_hist_%s.png' % opt.root))
 
 if 1:
     plt.figure(2, figsize=(8, 2.75))
@@ -93,4 +96,4 @@ if 1:
         ax.set_axisbelow(False)
         plt.grid(linestyle='--')
         plt.show()
-        plt.savefig(label + '_time_%s.png' % opt.root)
+        plt.savefig(os.path.join(opt.outdir, label + '_time_%s.png' % opt.root))
