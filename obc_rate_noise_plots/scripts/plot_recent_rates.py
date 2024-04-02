@@ -9,6 +9,8 @@ from Chandra.Time import DateTime
 from Ska.Matplotlib import plot_cxctime
 import Ska.engarchive.fetch as fetch
 from kadi import events
+from pathlib import Path
+import shutil
 
 
 def get_options():
@@ -99,6 +101,9 @@ def main():
             plt.grid(linestyle='--')
             plt.show()
             plt.savefig(os.path.join(opt.outdir, label + '_time_%s.png' % opt.root))
+
+    index = Path(__file__).parent / "files" / "index.html"
+    shutil.copy(index, opt.outdir)
 
 
 if __name__ == '__main__':
