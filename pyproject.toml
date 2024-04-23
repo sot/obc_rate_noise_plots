@@ -13,4 +13,4 @@ build-backend = "setuptools.build_meta"
 Homepage = "https://github.com/sot/obc_rate_noise_plots"
 
 [project.scripts]
-obc-rate-noise-plots = "obc_rate_noise_plots.scripts.plot_recent_rates:main"
+obc-rate-noise-plots = "obc_rate_noise_plots.plot_recent_rates:main"
