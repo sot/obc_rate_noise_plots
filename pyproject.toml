@@ -1,0 +1,16 @@
+[project]
+name = "obc_rate_noise_plots"
+dynamic = ["version"]
+dependencies = []
+
+[build-system]
+requires = ["setuptools", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+[project.urls]
+Homepage = "https://github.com/sot/obc_rate_noise_plots"
+
+[project.scripts]
+obc-rate-noise-plots = "obc_rate_noise_plots.plot_recent_rates:main"
